@@ -19,8 +19,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.zhongyitizhi1.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
-import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+
 
 public class HealthFragment extends Fragment {
 
@@ -41,15 +40,6 @@ public class HealthFragment extends Fragment {
                 textView.setText(s);
             }
         });
-        FloatingActionButton fab = root.findViewById(R.id.floatingActionButton2);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        
         //返回的 View 必须是片段布局的根视图
         return root;
 
