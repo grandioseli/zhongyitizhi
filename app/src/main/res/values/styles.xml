@@ -17,5 +17,11 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item> <!--  敲定颜色-->
+        <item name="android:textSize">2sp</item> <!--  搞掂字体大小-->
+        <!--这个也正确,用这个吧-->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
 
 </resources>

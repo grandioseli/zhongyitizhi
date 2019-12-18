@@ -11,13 +11,40 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".caozuozhinan"
+            android:label="操作指南"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".tizhi"
+            android:label="我的体质"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".shezhi"
+            android:label="设置"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".linearinme"
+            android:label="个人信息"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".lishiqushi"
+            android:label="历史趋势"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".xinlvqushi"
+            android:label="心率趋势"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".DefaultWelcomeActivity"
+            android:theme="@style/WelcomeScreenTheme"/>
     </application>
 
 </manifest>
