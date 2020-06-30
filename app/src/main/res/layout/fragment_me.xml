@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:maxWidth="160dp"
-        android:text="用户姓名"
+        android:text="个人信息"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="20sp"
@@ -105,12 +105,153 @@
         app:layout_constraintStart_toStartOf="parent">
     </ImageView>
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/caozuozhinan"
+        android:id="@+id/wodeshoucang"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="275dp"
+        android:background="@drawable/me_yuanjiaojuzhen1"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:id="@+id/wodeshoucang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_shoucang5"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/wodeshoucang"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/wodeshoucang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxWidth="160dp"
+        android:text="我的收藏"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/wodeshoucang" />
+    <ImageView
+        android:id="@+id/wodeshoucang3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_navigate_next_grave_24dp"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/wodeshoucang"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/xingquyuanwang"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="335dp"
+        android:background="@drawable/me_yuanjiaojuzhen1"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:id="@+id/xingquyuanwang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_xinyuandan_"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/xingquyuanwang"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/xingquyuanwang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxWidth="160dp"
+        android:text="我的愿景"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/xingquyuanwang" />
+    <ImageView
+        android:id="@+id/xingquyuanwang3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_navigate_next_grave_24dp"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/xingquyuanwang"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/advice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="395dp"
+        android:background="@drawable/me_yuanjiaojuzhen1"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:id="@+id/advice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_yijianfankui"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/advice"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/advice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxWidth="160dp"
+        android:text="意见反馈"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/advice" />
+    <ImageView
+        android:id="@+id/advice3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_navigate_next_grave_24dp"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/advice"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/caozuozhinan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="455dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
         app:layout_constraintTop_toTopOf="parent">
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -157,7 +298,7 @@
         android:layout_height="60dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="335dp"
+        android:layout_marginTop="515dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
         app:layout_constraintTop_toTopOf="parent">
     </androidx.appcompat.widget.LinearLayoutCompat>

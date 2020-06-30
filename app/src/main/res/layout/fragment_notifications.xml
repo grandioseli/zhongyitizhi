@@ -149,7 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:maxWidth="160dp"
-        android:text="基金服务"
+        android:text="客服咨询"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"

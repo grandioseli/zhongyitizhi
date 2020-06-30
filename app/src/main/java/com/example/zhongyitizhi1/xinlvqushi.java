@@ -57,7 +57,7 @@ public class xinlvqushi extends AppCompatActivity {
         }
     }
     private void initLineChart(){
-        Line line = new Line(mPointValues).setColor(Color.parseColor("#ffffff"));  //折线的颜色（橙色）
+        Line line = new Line(mPointValues).setColor(Color.parseColor("#ffffff"));  //折线的颜色（白色）
         List<Line> lines = new ArrayList<Line>();
         line.setShape(ValueShape.CIRCLE);//折线图上每个数据点的形状  这里是圆形 （有三种 ：ValueShape.SQUARE  ValueShape.CIRCLE  ValueShape.DIAMOND）
         line.setCubic(false);//曲线是否平滑，即是曲线还是折线
@@ -96,7 +96,8 @@ public class xinlvqushi extends AppCompatActivity {
         lineChart.setMaxZoom((float) 2);//最大方法比例
         lineChart.setContainerScrollEnabled(true, ContainerScrollType.HORIZONTAL);
         lineChart.setLineChartData(data);
-        lineChart.setVisibility(View.VISIBLE);        /**注：下面的7，10只是代表一个数字去类比而已
+        lineChart.setVisibility(View.VISIBLE);
+        /**注：下面的7，10只是代表一个数字去类比而已
          * 当时是为了解决X轴固定数据个数。见（http://forum.xda-developers.com/tools/programming/library-hellocharts-charting-library-t2904456/page2）;
          */
         Viewport v = new Viewport(lineChart.getMaximumViewport());

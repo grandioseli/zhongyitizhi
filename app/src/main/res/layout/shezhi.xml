@@ -162,7 +162,9 @@
         android:layout_centerInParent="true"
         android:background="@drawable/tuichudenglu"
         android:text="退出登录"
+        android:textSize="20dp"
         android:layout_marginTop="330dp"
+        android:textColor="#ffffff"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

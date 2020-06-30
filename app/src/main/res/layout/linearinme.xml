@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:maxWidth="160dp"
-        android:text="姓名"
+        android:text="用户名"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -85,17 +85,30 @@
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/xingming" />
-    <ImageView
+    <TextView
         android:id="@+id/xingming2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_navigate_next_grave_24dp"
-        app:layout_constraintHorizontal_bias="0.99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxWidth="160dp"
+        android:textAlignment="center"
+        android:textColor="#BDC3C7"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/xingming"
-        app:layout_constraintStart_toStartOf="parent">
-    </ImageView>
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/xingming" />
+<!--    <ImageView-->
+<!--        android:id="@+id/xingming3"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:src="@drawable/ic_navigate_next_grave_24dp"-->
+<!--        app:layout_constraintHorizontal_bias="0.99"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/xingming"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+<!--    </ImageView>-->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/shoujihao"
         android:layout_width="match_parent"
@@ -126,12 +139,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:maxWidth="160dp"
-        android:text="13212321232"
         android:textAlignment="center"
         android:textColor="#BDC3C7"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/shoujihao" />
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -164,7 +176,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:maxWidth="160dp"
-        android:text="男"
         android:textAlignment="center"
         android:textColor="#BDC3C7"
         android:textSize="16sp"

@@ -7,12 +7,18 @@ buildscript {
         maven {
             url "https://jitpack.io"
         }
-        
+//        下面两个maven是涉及到tuling
+        maven { url 'https://dl.bintray.com/sfsheng0322/maven' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
         classpath 'com.github.lecho:hellocharts-android:v1.5.8'
-        
+        //mob短信服务
+        classpath "com.mob.sdk:MobSDK:2018.0319.1724"
+        //图灵机器人界面相关
+        classpath 'com.jakewharton:butterknife:10.2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -22,7 +28,10 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url "https://jitpack.io" }
+        //下面涉及到图灵机器人界面相关
+        maven { url 'https://dl.bintray.com/sfsheng0322/maven' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     }
 }
 

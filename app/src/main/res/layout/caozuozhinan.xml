@@ -21,7 +21,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:text="这是操作指南text"
+        android:text="操作指南待最后补充"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

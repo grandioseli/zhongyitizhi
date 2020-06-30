@@ -1,5 +1,6 @@
 package com.example.zhongyitizhi1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.zhongyitizhi1.ui.notifications.NotificationsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.stephentuso.welcome.WelcomeHelper;
@@ -17,8 +19,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationBuilderWithBuilderAccessor;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -65,8 +69,21 @@ public class MainActivity extends AppCompatActivity {
         //设置与导航控制器一起使用的工具栏
         NavigationUI.setupWithNavController(navView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration1);
+//接受跳转intent
+//        Intent intent=getIntent();
+//        int bigMake=intent.getIntExtra("bigMake",0);
+//        if(bigMake ==1 ) {
+//            getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.nav_host_fragment,new NotificationsFragment())
+//                    .addToBackStack(null)
+//                    .commit();
+//            NotificationsFragment fragment = new NotificationsFragment();
+//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//            transaction.replace(R.id.nav_host_fragment, fragment).commit();
+//        }
 
-    }
+}
 //欢迎页相关
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -80,5 +97,4 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration1)
                 || super.onSupportNavigateUp();
     }
-
 }
