@@ -1,23 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zhongyitizhi1">
-
+<!--  下面这几个权限是为了图灵机器人  -->
+<!--    用户唤醒应用的权限-->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+<!--    不熄屏权限-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--    网络通信权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<!--    允许程序震动-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+<!--    允许程序打开窗口-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<!--    允许一个程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<!--允许程序访问Wi-Fi网络状态信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<!--    允许程序改变Wi-Fi连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+<!--允许一个程序访问精良位置(如GPS)-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<!--允许应用程序访问额外的位置提供命令-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+<!--允许程序改变网络连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--    后面这几个权限设置是在添加手机短信功能时添加    -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!--    允许应用程序联网（必须）-->
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--    允许访问WiFi网络状态信息（必须）-->
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE" />
+    <!--    允许读取手机状态（必须）-->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--    允许访问网络状态（必须）-->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--    允许写手机存储（必须）-->
+    <!-- 相机权限 -->
+    <uses-permission
+        android:name="android.permission.CAMERA" />
+    <!-- 录音权限 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 读写权限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEM"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
+        <activity android:name=".HttpUtilsHttpURLConnection">
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Forgetpwd"
+            android:label="忘记密码"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".fixInfo"
+            android:label="完善信息"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".caozuozhinan"
+            android:label="操作指南"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Prepare"
+            android:label="启动准备"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Login"
+            android:label="中医体质APP"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".Register"
+            android:label="注册"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".tizhi"
+            android:label="我的体质"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".shezhi"
+            android:label="设置"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".linearinme"
+            android:label="个人信息"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".lishiqushi"
+            android:label="历史趋势"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Mycollection"
+            android:label="我的收藏"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".MyDream"
+            android:label="我的愿景"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Myadvice"
+            android:label="意见反馈"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".xinlvqushi"
+            android:label="心率趋势"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".DefaultWelcomeActivity"
+            android:theme="@style/WelcomeScreenTheme"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.zhongyitizhi1.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <activity
+            android:label="问答机器人"
+            android:name=".tuling.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:label="关于本机器人"
+            android:name=".tuling.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name="tuling.NewsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="tuling.DetailActivity"
+            android:screenOrientation="portrait"/>
+    </application>
 </manifest>

@@ -3,17 +3,177 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+//https://icons8.cn插图
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearinnotification"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/me_yuanjiaojuzhen1"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/jiankangzixun"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/jiankangzixun"
+        app:layout_constraintTop_toTopOf="@id/linearinnotification">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:id="@+id/sousuochahua"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/sousuochahua"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linearinnotification"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
     <TextView
-        android:id="@+id/text_notifications"
+        android:id="@+id/jiankangzixun1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:maxWidth="160dp"
+        android:text="健康咨询"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/jiankangzixun" />
+    <ImageView
+        android:id="@+id/wodetizhi3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_navigate_next_white_24dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/jiankangzixun"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <ImageView
+        android:id="@+id/yujingfuwu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/yujing"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearinnotification"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/yujingfuwu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxWidth="160dp"
+        android:text="预警服务"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yujingfuwu" />
+    <ImageView
+        android:id="@+id/fufeifuwu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/fufeifuwu"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearinnotification"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/fufeifuwu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxWidth="160dp"
+        android:text="付费服务"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fufeifuwu" />
+    <ImageView
+        android:id="@+id/jijin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/jijing"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearinnotification"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/jijin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxWidth="160dp"
+        android:text="基金服务"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jijin" />
+    <ImageView
+        android:id="@+id/kefu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="166dp"
+        android:src="@drawable/kefu"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linearinnotification"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <TextView
+        android:id="@+id/kefu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxWidth="160dp"
+        android:text="客服咨询"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kefu" />
+    //中间的颜色分别用于设置字体颜色，指示器颜色，tablayout背景颜色
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="?attr/colorPrimary"
+        android:layout_marginTop="280dp"
+        app:tabTextColor="#ffffff"
+        app:tabIndicatorColor="#ffffff"
+        app:tabBackground="@color/tianlanse"
+        app:layout_constraintTop_toTopOf="@id/linearinnotification"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginTop="355dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 </androidx.constraintlayout.widget.ConstraintLayout>

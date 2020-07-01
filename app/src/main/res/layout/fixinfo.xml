@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fixinfo" />
+
+    </FrameLayout>
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:maxWidth="160dp"
+        android:text="完善信息"
+        android:textAlignment="center"
+        android:textColor="#86a8e7"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/text_in_fixinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:maxWidth="160dp"
+        android:text="1.您的性别"
+        android:textAlignment="center"
+        android:textColor="#86a8e7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello" />
+    <ImageView
+        android:id="@+id/nanxing"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_nanxing_"
+        android:layout_marginTop="100dp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <ImageView
+        android:id="@+id/nvxing"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_nvxing_"
+        android:layout_marginTop="100dp"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <RadioGroup
+        android:id="@+id/rgSex"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="                                                  "
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/text_in_fixinfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:maxWidth="160dp"
+        android:text="2,您的电话号码"
+        android:textAlignment="center"
+        android:textColor="#86a8e7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/phpnenumber"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="230dp"
+        android:elevation="30dp"
+        android:alpha="0.1"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/me_yuanjiaojuzhen1">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:id="@+id/phone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_phone"
+        android:layout_marginTop="250dp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:hint="输入您的电话号码"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"/>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/buttonshapewhitebg"
+        android:text="提交信息"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#96ffffff"
+        android:textSize="16dp"
+        android:layout_marginTop="550dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hello"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
