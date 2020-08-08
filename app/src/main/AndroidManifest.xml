@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zhongyitizhi1">
-<!--  下面这几个权限是为了图灵机器人  -->
-<!--    用户唤醒应用的权限-->
+    <!--  下面这几个权限是用于蓝牙连接可穿戴设备-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--  下面这几个权限是为了图灵机器人  -->
+    <!--    用户唤醒应用的权限-->
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
-<!--    不熄屏权限-->
+    <!--    不熄屏权限-->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <!--    网络通信权限-->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<!--    允许程序震动-->
+    <!--    允许程序震动-->
     <uses-permission android:name="android.permission.VIBRATE"/>
-<!--    允许程序打开窗口-->
+    <!--    允许程序打开窗口-->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-<!--    允许一个程序访问CellID或WiFi热点来获取粗略的位置-->
+    <!--    允许一个程序访问CellID或WiFi热点来获取粗略的位置-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-<!--允许程序访问Wi-Fi网络状态信息-->
+    <!--允许程序访问Wi-Fi网络状态信息-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-<!--    允许程序改变Wi-Fi连接状态-->
+    <!--    允许程序改变Wi-Fi连接状态-->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-<!--允许一个程序访问精良位置(如GPS)-->
+    <!--允许一个程序访问精良位置(如GPS)-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-<!--允许应用程序访问额外的位置提供命令-->
+    <!--允许应用程序访问额外的位置提供命令-->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-<!--允许程序改变网络连接状态-->
+    <!--允许程序改变网络连接状态-->
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <!--    后面这几个权限设置是在添加手机短信功能时添加    -->
     <uses-permission
@@ -51,6 +56,7 @@
     <uses-permission
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEM"/>
     <application
+        android:name=".bluetooth.zhongyitizhiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -63,6 +69,12 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".bluetooth.PermissionActivity"
+            android:label="手环连接"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity

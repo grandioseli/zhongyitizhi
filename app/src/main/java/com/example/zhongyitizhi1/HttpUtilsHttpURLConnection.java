@@ -9,6 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class
@@ -41,7 +42,7 @@ HttpUtilsHttpURLConnection {
             //获取输出流对象设置此http进行输出
             OutputStream outputStream = connection.getOutputStream();
             //默认缓冲区大小构造字符缓冲输出流对象
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream, StandardCharsets.UTF_8));
             //向缓冲区中写入指定的字符，也就是把参数中的map对象按照一定的规则组合成字符串
             writer.write(getStringFromOutput(parms));
             writer.flush();

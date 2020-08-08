@@ -102,16 +102,8 @@ public class ChatMessageAdapter extends BaseListAdapter<MessageEntity> {
     //  一分钟内的请求与回复不显示时间
     public boolean isDisplayTime(int position) {
         if (position > 0) {
-            if ((getItem(position).getTime() - getItem(position-1).getTime()) > 60 * 1000) {
-                return true;
-            } else {
-                return false;
-            }
-        } else if (position == 0) {
-            return true;
-        } else {
-            return false;
-        }
+            return (getItem(position).getTime() - getItem(position - 1).getTime()) > 60 * 1000;
+        } else return position == 0;
     }
 
     private void copyDeleteDialog(Context context, MessageEntity entity) {

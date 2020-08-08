@@ -2,26 +2,14 @@ package com.example.zhongyitizhi1.tuling;
 
 public class IsNullOrEmpty {
 	public static boolean isEmpty(String str) {
-		if(str==null||"".equals(str)||"null".equals(str)){
-			return true;
-		}else{
-			return false;
-		}
+        return str == null || "".equals(str) || "null".equals(str);
 	}
 
     public static boolean isEmptyZero(String str) {
-        if(str==null||"".equals(str)||"null".equals(str)||"0".equals(str)){
-            return true;
-        }else{
-            return false;
-        }
+        return str == null || "".equals(str) || "null".equals(str) || "0".equals(str);
     }
 
     public static boolean isEmptyNoLimited(String str) {
-        if(str==null||"".equals(str)||"null".equals(str)||"不限".equals(str)){
-            return true;
-        }else{
-            return false;
-        }
+        return str == null || "".equals(str) || "null".equals(str) || "不限".equals(str);
     }
 }

@@ -60,8 +60,8 @@ public class TimeUtil {
         calendar.setTime(new Date(ldate));
         String years = String.valueOf(calendar.get(Calendar.YEAR));
         String mouth = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
-        int weekday = Integer.valueOf(calendar.get(calendar.DAY_OF_WEEK));
+        String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
+        int weekday = Integer.valueOf(calendar.get(Calendar.DAY_OF_WEEK));
 
         if (Calendar.MONDAY == weekday) {
             weekdays = "周一";
@@ -80,8 +80,8 @@ public class TimeUtil {
         } else {
             weekdays = "";
         }
-        int hour = calendar.get(calendar.HOUR_OF_DAY);
-        int minute = calendar.get(calendar.MINUTE);
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
 
         return years + "-" + mouth + "-" + day + " " + weekdays + " " + FormatZero(hour) + ":" + FormatZero(minute);
     }
@@ -92,10 +92,10 @@ public class TimeUtil {
         calendar.setTime(new Date(ldate));
         String years = String.valueOf(calendar.get(Calendar.YEAR));
         String mouth = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
+        String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
 
-        int hour = calendar.get(calendar.HOUR_OF_DAY);
-        int minute = calendar.get(calendar.MINUTE);
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
 
         return years + "-" + mouth + "-" + day + " " + FormatZero(hour) + ":" + FormatZero(minute);
     }
@@ -114,7 +114,7 @@ public class TimeUtil {
         calendar.setTime(new Date(ldate));
         String years = String.valueOf(calendar.get(Calendar.YEAR));
         String mouth = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
+        String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
         return years + "年" + mouth + "月" + day + "日";
     }
 
@@ -125,11 +125,11 @@ public class TimeUtil {
         calendar.setTime(new Date(ldate));
         String years = String.valueOf(calendar.get(Calendar.YEAR));
         String mouth = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
+        String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
 
         calendar.setTime(new Date(ldate_end));
         String mouth_end = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day_end = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
+        String day_end = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
 
         return years + "年" + mouth + "月" + day + "日至" + mouth_end + "月" + day_end + "日";
     }
@@ -236,8 +236,8 @@ public class TimeUtil {
     public static boolean compareTime(int startHour, int startMinument, int endHour, int endMinument) {
         SimpleDateFormat df = new SimpleDateFormat(DAY_TIME_FORMAT);
         try {
-            Date startDate = df.parse(String.valueOf(startHour) + ":" + String.valueOf(startMinument));
-            Date endDate = df.parse(String.valueOf(endHour) + ":" + String.valueOf(endMinument));
+            Date startDate = df.parse(startHour + ":" + startMinument);
+            Date endDate = df.parse(endHour + ":" + endMinument);
             return startDate.getTime() - endDate.getTime() >= 0;
         } catch (Exception e) {
             return false;
@@ -258,8 +258,8 @@ public class TimeUtil {
     public static String formatVisitTime(int startHour, int startMinument, int endHour, int endMinument) {
         SimpleDateFormat df = new SimpleDateFormat(DAY_TIME_FORMAT);
         try {
-            Date startDate = df.parse(String.valueOf(startHour) + ":" + String.valueOf(startMinument));
-            Date endDate = df.parse(String.valueOf(endHour) + ":" + String.valueOf(endMinument));
+            Date startDate = df.parse(startHour + ":" + startMinument);
+            Date endDate = df.parse(endHour + ":" + endMinument);
             return df.format(startDate) + "-" + df.format(endDate);
         } catch (Exception e) {
             return "";

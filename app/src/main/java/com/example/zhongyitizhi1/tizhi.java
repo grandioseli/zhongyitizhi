@@ -362,7 +362,7 @@ public class tizhi extends AppCompatActivity {
     public  Uri getOutputMediaFileUri(Context context) {
         //测试新的路径
         //创建路径
-        String filePath = getExternalFilesDir(null).getAbsolutePath() + File.separator + String.valueOf(System.currentTimeMillis()) + ".jpg";
+        String filePath = getExternalFilesDir(null).getAbsolutePath() + File.separator + System.currentTimeMillis() + ".jpg";
         //创建file文件
         File outputFile = new File(filePath);
         //如果上述定义的路径不存在则创建路径
