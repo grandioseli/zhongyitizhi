@@ -34,9 +34,8 @@
         android:id="@+id/test_tizhi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/ic_jiance"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/linearintizhi"
         app:layout_constraintStart_toStartOf="parent">
@@ -45,7 +44,7 @@
         android:id="@+id/text_in_tizhi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="0dp"
         android:maxWidth="330dp"
         android:text="了解自己的体质｜了解体质与疾病的关系｜更重要的了解如何护理自己"
         android:textAlignment="center"
@@ -54,31 +53,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/linearintizhi" />
+        app:layout_constraintTop_toBottomOf="@id/test_tizhi" />
     <View
+        android:id="@+id/view_in_tizhi"
         android:layout_width="250dp"
         android:layout_height="1dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="5dp"
         android:background="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/linearintizhi"/>
+        app:layout_constraintTop_toBottomOf="@id/text_in_tizhi"
+        app:layout_constraintBottom_toTopOf="@id/text_in_tizhi2"/>
     <TextView
         android:id="@+id/text_in_tizhi2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="0dp"
         android:maxWidth="390dp"
-        android:text="此体质测试是依据中医国家标志开发，虽然测试过程
-                      繁复，但却能帮助知晓身体情况，洞悉疾病隐患，当常常自检"
+        android:text="此体质测试是依据中医国家标志开发，虽然测试过程繁复，但却能帮助知晓身体情况，洞悉疾病隐患，当常常自检"
         android:textAlignment="center"
         android:textColor="#96ffffff"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/linearintizhi" />
+        app:layout_constraintTop_toBottomOf="@id/view_in_tizhi"
+        app:layout_constraintBottom_toBottomOf="@id/linearintizhi"/>
     <TextView
         android:id="@+id/text_in_tizhi3"
         android:layout_width="wrap_content"

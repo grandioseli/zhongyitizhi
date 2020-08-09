@@ -63,7 +63,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/bushen"
@@ -75,9 +75,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="121dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/bushen">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t2"
@@ -109,7 +109,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/kangshuailao"
@@ -121,9 +121,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/kangshuailao">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t3"
@@ -155,7 +155,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/qushixiaozhong"
@@ -167,9 +167,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="223dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/qushixiaozhong">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t4"
@@ -201,7 +201,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/shuhuanyali"
@@ -213,9 +213,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="274dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/shuhuanyali">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t5"
@@ -247,7 +247,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/zengqiangmianyili"
@@ -259,9 +259,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/zengqiangmianyili">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t6"
@@ -293,7 +293,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/jinglichongpei"
@@ -305,9 +305,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/jinglichongpei">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t7"
@@ -339,7 +339,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/haoqise"
@@ -351,9 +351,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="427dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/haoqise">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t8"
@@ -385,7 +385,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/yangfeiyiqi"
@@ -397,9 +397,9 @@
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="478dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/me_yuanjiaojuzhen1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/yangfeiyiqi">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/t9"
@@ -431,7 +431,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_gou"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/haoshuimian"

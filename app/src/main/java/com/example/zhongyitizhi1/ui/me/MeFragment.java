@@ -44,8 +44,7 @@ public class MeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        meViewModel =
-                ViewModelProviders.of(this).get(MeViewModel.class);
+        meViewModel = ViewModelProviders.of(this).get(MeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_me, container, false);
         View view1 = root.findViewById(R.id.caozuozhinan);
         view1.setOnClickListener(new View.OnClickListener() {

@@ -30,6 +30,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
+import com.example.zhongyitizhi1.expandable.expandable;
+import com.example.zhongyitizhi1.result.pinghezhi;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -59,6 +62,7 @@ public class tizhi extends AppCompatActivity {
     //确定体质button
     private Button tizhiqueding;
     private Button test;
+    private Button textTest;
     //照片uri
     Uri uri;
     //这里是需要动态申请的权限
@@ -79,6 +83,7 @@ public class tizhi extends AppCompatActivity {
         }
         setContentView(R.layout.tizhi);
         test = findViewById(R.id.kaishiceshi);
+        textTest = findViewById(R.id.kaishidajuan);
         Toolbar toolbar = findViewById(R.id.toolbar2);
         tizhi_button1 = findViewById(R.id.tizhi_button1);
         tizhi_button2 = findViewById(R.id.tizhi_button2);
@@ -101,6 +106,7 @@ public class tizhi extends AppCompatActivity {
         tizhi_button9.setOnClickListener(mListener);
         tizhiqueding.setOnClickListener(mListener);
         test.setOnClickListener(mListener);
+        textTest.setOnClickListener(mListener);
         //sqlite类
         dbHelper = new MyDatabaseHelper(this, "mydb.db3",1);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -272,7 +278,7 @@ public class tizhi extends AppCompatActivity {
                 case R.id.kaishiceshi:
                     requestPermission();
                     //添加仿ios底部dialog，添加拍照上传按钮
-                    new ActionSheetDialog(tizhi.this).builder().setTitle("上传车辆照片")
+                    new ActionSheetDialog(tizhi.this).builder()
                             .setCancelable(false).setCanceledOnTouchOutside(false)
                             .addSheetItem("拍照上传", ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
                                 @Override
@@ -298,6 +304,11 @@ public class tizhi extends AppCompatActivity {
                             startActivityForResult(intent1, CAMERA_CHOOSE_PICTURE);
                         }
                     }).show();
+                    break;
+                case R.id.kaishidajuan:
+                    Intent intent = new Intent(tizhi.this, expandable.class) ;    //切换Login Activity至User Activity
+                    startActivity(intent);
+                    finish();
                     break;
                 case R.id.tizhiqueding:
                     physique1 = String.valueOf(tizhi);
@@ -446,6 +457,9 @@ public class tizhi extends AppCompatActivity {
                 if (resultCode == Activity.RESULT_OK) {
                     //在img中显示图片
 //                    iv_photo.setImageURI(uri);
+                    Intent intent = new Intent(tizhi.this, pinghezhi.class) ;    //切换Login Activity至User Activity
+                    startActivity(intent);
+                    finish();
                     System.out.println("相机拍照成功了");
                 }
                 System.out.println(resultCode);
@@ -455,7 +469,9 @@ public class tizhi extends AppCompatActivity {
                     Bitmap bm = null;
                     // 外界的程序访问ContentProvider所提供数据 可以通过ContentResolver接口
                     ContentResolver resolver = getContentResolver();
-
+                    Intent intent = new Intent(tizhi.this, pinghezhi.class) ;    //切换Login Activity至User Activity
+                    startActivity(intent);
+                    finish();
                     try {
                         Uri originalUri = data.getData(); // 获得图片的uri
                         System.out.println("图片的uri为"+originalUri);

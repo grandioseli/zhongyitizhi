@@ -73,25 +73,23 @@
         android:id="@+id/chakanqushi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="查看趋势"
         android:textAlignment="center"
         android:textColor="#2193b0"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintTop_toTopOf="@id/shisihshuju"
+        app:layout_constraintBottom_toBottomOf="@id/shisihshuju"/>
     <ImageView
         android:id="@+id/chakanqushiyoujiantou"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="20dp"
         android:src="@drawable/ic_navigate_next_blue_24dp"
-        app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="@id/chakanqushi"
+        app:layout_constraintTop_toTopOf="@id/chakanqushi"
+        app:layout_constraintStart_toEndOf="@id/chakanqushi">
     </ImageView>
     <ImageView
         android:id="@+id/xinlv"
@@ -99,148 +97,117 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:src="@drawable/ic_xinshuai"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/yundong">
     </ImageView>
     <TextView
         android:id="@+id/xinlv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:text="心率"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xinlv"
+        app:layout_constraintTop_toTopOf="@id/xinlv" />
     <TextView
         android:id="@+id/xinlv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="100"
         android:textAlignment="center"
         android:textColor="#757f9a"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xinlv"
+        app:layout_constraintBottom_toBottomOf="@id/xinlv" />
     <ImageView
         android:id="@+id/xueya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:src="@drawable/xueya"
-        app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/shuimian">
     </ImageView>
     <TextView
         android:id="@+id/xueya1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:text="血压"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xueya"
+        app:layout_constraintTop_toTopOf="@id/xueya" />
     <TextView
         android:id="@+id/xueya2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="100"
         android:textAlignment="center"
         android:textColor="#757f9a"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xueya"
+        app:layout_constraintBottom_toBottomOf="@id/xueya" />
     <ImageView
         android:id="@+id/xueyang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/xueyang"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/xinlv"
+        app:layout_constraintStart_toStartOf="@id/yundong">
     </ImageView>
     <TextView
         android:id="@+id/xueyang1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:text="血氧"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xueyang"
+        app:layout_constraintTop_toTopOf="@id/xueyang" />
     <TextView
         android:id="@+id/xueyang2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
         android:text="100"
         android:textAlignment="center"
         android:textColor="#757f9a"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xueyang"
+        app:layout_constraintBottom_toBottomOf="@id/xueyang" />
     <ImageView
         android:id="@+id/xuetang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/xuetang"
-        app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/xueya"
+        app:layout_constraintStart_toStartOf="@id/shuimian">
     </ImageView>
     <TextView
         android:id="@+id/xuetang1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="0dp"
         android:text="血糖"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xuetang"
+        app:layout_constraintTop_toTopOf="@id/xuetang" />
     <TextView
         android:id="@+id/xuetang2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
         android:text="100"
         android:textAlignment="center"
         android:textColor="#757f9a"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/xuetang"
+        app:layout_constraintBottom_toBottomOf="@id/xuetang" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/smalllinearinhealth1"
         android:layout_width="180dp"
@@ -249,46 +216,41 @@
         android:background="@drawable/yuanjiaojuzhen1"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/smalllinearinhealth2"
         app:layout_constraintTop_toBottomOf="@id/linearinhealth">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <ImageView
         android:id="@+id/yundong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/yundong"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth1"
+        app:layout_constraintStart_toStartOf="@id/smalllinearinhealth1">
     </ImageView>
     <TextView
         android:id="@+id/yundong1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
         android:text="有氧运动"
-        android:textAlignment="center"
         android:textColor="#eaeaea"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/yundong"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth1" />
     <TextView
         android:id="@+id/yundong2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
         android:text="0时0分"
-        android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/yundong"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth1" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/smalllinearinhealth2"
         android:layout_width="180dp"
@@ -296,7 +258,7 @@
         android:layout_marginTop="190dp"
         android:background="@drawable/yuanjiaojuzhen2"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/smalllinearinhealth1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearinhealth">
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -304,87 +266,76 @@
         android:id="@+id/shuimian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/shuimian"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth2"
+        app:layout_constraintStart_toStartOf="@id/smalllinearinhealth2">
     </ImageView>
     <TextView
         android:id="@+id/shuimian1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
         android:text="睡眠统计"
-        android:textAlignment="center"
         android:textColor="#eaeaea"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/shuimian"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth2" />
     <TextView
         android:id="@+id/shuimian2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
         android:text="0时0分"
-        android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/shuimian"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth2" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/smalllinearinhealth3"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/yuanjiaojuzhen3"
-        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth">
+        app:layout_constraintEnd_toStartOf="@id/smalllinearinhealth4"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth1">
     </androidx.appcompat.widget.LinearLayoutCompat>
     <ImageView
         android:id="@+id/yujing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/yujing"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth3"
+        app:layout_constraintStart_toStartOf="@id/smalllinearinhealth3">
     </ImageView>
     <TextView
         android:id="@+id/yujing1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
         android:text="疾病预警"
-        android:textAlignment="center"
         android:textColor="#eaeaea"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/yujing"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth3" />
     <TextView
         android:id="@+id/yujing2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
         android:text="暂无数据"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/yujing"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth3" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/smalllinearinhealth4"
         android:layout_width="180dp"
@@ -392,7 +343,7 @@
         android:layout_marginTop="280dp"
         android:background="@drawable/yuanjiaojuzhen4"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/smalllinearinhealth3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearinhealth">
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -400,38 +351,33 @@
         android:id="@+id/yuce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/yuce"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth4"
+        app:layout_constraintStart_toStartOf="@id/smalllinearinhealth4">
     </ImageView>
     <TextView
         android:id="@+id/yuce1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
         android:text="疾病预测"
-        android:textAlignment="center"
         android:textColor="#eaeaea"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/yuce"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth4" />
     <TextView
         android:id="@+id/yuce2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
         android:text="暂无数据"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearinhealth" />
+        app:layout_constraintStart_toEndOf="@id/yuce"
+        app:layout_constraintTop_toTopOf="@id/smalllinearinhealth4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

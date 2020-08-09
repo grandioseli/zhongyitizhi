@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#99ab45</color>
     <color name="anlanyan">#6A5ACD</color>
     <color name="tianlanse">#00BFFF</color>
     <color name="chunlvse">#008000</color>
@@ -34,4 +34,6 @@
     <!-- divider -->
     <color name="divider_1">#e2e2e2</color>
     <color name="divider_2">#e6e6e6</color>
+<!--    调查问卷-->
+    <color name="colorFocused">#bbdefb</color>
 </resources>

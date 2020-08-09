@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zhongyitizhi1">
+<!--    科大讯飞-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 <!--  下面这几个权限是为了图灵机器人  -->
 <!--    用户唤醒应用的权限-->
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
@@ -83,6 +85,10 @@
             android:label="启动准备"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".expandable.expandable"
+            android:label="调查问卷"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".Login"
             android:label="中医体质APP"
             android:theme="@style/AppTheme.NoActionBar">
@@ -127,6 +133,18 @@
             android:label="心率趋势"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".result.pinghezhi"
+            android:label="平和质"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".result.xueyuzhi"
+            android:label="血瘀质"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".result.qixuzhi"
+            android:label="气虚质"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".DefaultWelcomeActivity"
             android:theme="@style/WelcomeScreenTheme"/>
         <provider
@@ -140,7 +158,7 @@
         </provider>
         <activity
             android:label="问答机器人"
-            android:name=".tuling.MainActivity"
+            android:name=".tuling.MainActivity2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity

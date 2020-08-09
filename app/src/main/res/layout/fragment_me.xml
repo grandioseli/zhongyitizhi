@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -34,14 +38,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
         android:maxWidth="160dp"
         android:text="个人信息"
-        android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/gerentouxiang"
         app:layout_constraintTop_toTopOf="@id/linearinme" />
     <ImageView
         android:id="@+id/chakanqushiyoujiantou"
@@ -86,7 +88,7 @@
         android:text="我的体质"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:elevation="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
@@ -118,38 +120,35 @@
         android:id="@+id/wodeshoucang1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/ic_shoucang5"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/wodeshoucang"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/wodeshoucang"
+        app:layout_constraintBottom_toBottomOf="@id/wodeshoucang">
     </ImageView>
     <TextView
         android:id="@+id/wodeshoucang2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:maxWidth="160dp"
         android:text="我的收藏"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/wodeshoucang" />
+        app:layout_constraintStart_toEndOf="@id/wodeshoucang1"
+        app:layout_constraintTop_toTopOf="@id/wodeshoucang"
+        app:layout_constraintBottom_toBottomOf="@id/wodeshoucang"/>
     <ImageView
         android:id="@+id/wodeshoucang3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
         android:elevation="5dp"
         android:src="@drawable/ic_navigate_next_grave_24dp"
         app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/wodeshoucang"
         app:layout_constraintTop_toTopOf="@id/wodeshoucang"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="@id/wodeshoucang"
+        app:layout_constraintStart_toStartOf="@id/wodeshoucang">
     </ImageView>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/xingquyuanwang"
@@ -165,38 +164,35 @@
         android:id="@+id/xingquyuanwang1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/ic_xinyuandan_"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/xingquyuanwang"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/xingquyuanwang"
+        app:layout_constraintBottom_toBottomOf="@id/xingquyuanwang">
     </ImageView>
     <TextView
         android:id="@+id/xingquyuanwang2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:maxWidth="160dp"
         android:text="我的愿景"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/xingquyuanwang" />
+        app:layout_constraintStart_toEndOf="@id/xingquyuanwang1"
+        app:layout_constraintTop_toTopOf="@id/xingquyuanwang"
+        app:layout_constraintBottom_toBottomOf="@id/xingquyuanwang"/>
     <ImageView
         android:id="@+id/xingquyuanwang3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
         android:elevation="5dp"
         android:src="@drawable/ic_navigate_next_grave_24dp"
         app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/xingquyuanwang"
         app:layout_constraintTop_toTopOf="@id/xingquyuanwang"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/xingquyuanwang"
+        app:layout_constraintBottom_toBottomOf="@id/xingquyuanwang">
     </ImageView>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/advice"
@@ -212,38 +208,35 @@
         android:id="@+id/advice1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/ic_yijianfankui"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/advice"
         app:layout_constraintTop_toTopOf="@id/advice"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/advice">
     </ImageView>
     <TextView
         android:id="@+id/advice2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:maxWidth="160dp"
         android:text="意见反馈"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/advice" />
+        app:layout_constraintStart_toEndOf="@id/advice1"
+        app:layout_constraintTop_toTopOf="@id/advice"
+        app:layout_constraintBottom_toBottomOf="@id/advice"/>
     <ImageView
         android:id="@+id/advice3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
         android:elevation="5dp"
         android:src="@drawable/ic_navigate_next_grave_24dp"
         app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/advice"
         app:layout_constraintTop_toTopOf="@id/advice"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/advice"
+        app:layout_constraintBottom_toBottomOf="@id/advice">
     </ImageView>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/caozuozhinan"
@@ -259,38 +252,35 @@
         android:id="@+id/caozuozhinan1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/caozuozhinan"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/caozuozhinan"
         app:layout_constraintTop_toTopOf="@id/caozuozhinan"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/caozuozhinan">
     </ImageView>
     <TextView
         android:id="@+id/caozuozhinan2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:maxWidth="160dp"
         android:text="操作指南"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/caozuozhinan"
+        app:layout_constraintStart_toEndOf="@id/caozuozhinan1"
         app:layout_constraintTop_toTopOf="@id/caozuozhinan" />
     <ImageView
         android:id="@+id/caozuozhinan3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
         android:elevation="5dp"
         android:src="@drawable/ic_navigate_next_grave_24dp"
         app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/caozuozhinan"
         app:layout_constraintTop_toTopOf="@id/caozuozhinan"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/caozuozhinan"
+        app:layout_constraintBottom_toBottomOf="@id/caozuozhinan">
     </ImageView>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/shezhi"
@@ -306,38 +296,36 @@
         android:id="@+id/shezhi1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/shezhi"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/shezhi"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/shezhi">
     </ImageView>
     <TextView
         android:id="@+id/shezhi2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:maxWidth="160dp"
-        android:text="设置"
-        android:textAlignment="center"
+        android:text="系统设置"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/shezhi"
+        app:layout_constraintStart_toEndOf="@id/shezhi1"
         app:layout_constraintTop_toTopOf="@id/shezhi" />
     <ImageView
         android:id="@+id/shezhi3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
         android:elevation="5dp"
         android:src="@drawable/ic_navigate_next_grave_24dp"
         app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/shezhi"
         app:layout_constraintTop_toTopOf="@id/shezhi"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/shezhi"
+        app:layout_constraintBottom_toBottomOf="@id/shezhi">
     </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

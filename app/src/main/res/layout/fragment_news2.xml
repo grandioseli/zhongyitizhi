@@ -12,7 +12,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:text="这边准备有精力做新闻后端"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:sizeandroid="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearInExpandable"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/yuanjiaojuzhen5"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_nansheng"
+        app:layout_constraintEnd_toStartOf="@id/peopletext"
+        app:layout_constraintTop_toTopOf="@id/linearInExpandable"
+        app:layout_constraintStart_toStartOf="@id/linearInExpandable"
+        app:layout_constraintBottom_toBottomOf="@id/linearInExpandable">
+    </ImageView>
+    <TextView
+        android:id="@+id/peopletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:text="这是一份为男性精心准备的调查问卷，以下问题请您根据最近三个月的身体感受回答，但是不建议16岁以下孩童回答"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/linearInExpandable"
+        app:layout_constraintStart_toEndOf="@id/people"
+        app:layout_constraintTop_toTopOf="@id/linearInExpandable"
+        app:layout_constraintBottom_toBottomOf="@id/linearInExpandable"/>
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linearInExpandable"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

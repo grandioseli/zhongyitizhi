@@ -24,7 +24,7 @@ import com.example.zhongyitizhi1.R;
 import com.example.zhongyitizhi1.caozuozhinan;
 import com.example.zhongyitizhi1.linearinme;
 import com.example.zhongyitizhi1.tuling.AboutActivity;
-import com.example.zhongyitizhi1.tuling.MainActivity;
+import com.example.zhongyitizhi1.tuling.MainActivity2;
 import com.example.zhongyitizhi1.ui.news.news1;
 import com.example.zhongyitizhi1.ui.news.news2;
 import com.example.zhongyitizhi1.ui.news.news3;
@@ -108,7 +108,7 @@ public class NotificationsFragment extends Fragment {
         View view1 = root.findViewById(R.id.jiankangzixun);
         view1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent1 = new Intent(getActivity(), MainActivity.class);
+                Intent intent1 = new Intent(getActivity(), MainActivity2.class);
                 startActivity(intent1);
             }
         });
