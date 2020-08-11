@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +33,8 @@ import androidx.core.content.FileProvider;
 
 import com.example.zhongyitizhi1.expandable.expandable;
 import com.example.zhongyitizhi1.result.pinghezhi;
+
+import org.json.JSONException;
 
 import java.io.File;
 import java.io.IOException;
@@ -63,14 +66,16 @@ public class tizhi extends AppCompatActivity {
     private Button tizhiqueding;
     private Button test;
     private Button textTest;
-    //照片uri
+    //照片uri以及filepath
+    String filePath;
     Uri uri;
     //这里是需要动态申请的权限
-    private static final String[] CAMERA_PERMISSIONS = {Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE};
+    private static final String[] CAMERA_PERMISSIONS = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
     //回调标志
     private static final int CAMERA_PERMISSIONS_CODE = 1;
     private static final int CAMERA_TAKE_PHOTO = 2;
     private static final int CAMERA_CHOOSE_PICTURE = 3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //常规
@@ -108,7 +113,7 @@ public class tizhi extends AppCompatActivity {
         test.setOnClickListener(mListener);
         textTest.setOnClickListener(mListener);
         //sqlite类
-        dbHelper = new MyDatabaseHelper(this, "mydb.db3",1);
+        dbHelper = new MyDatabaseHelper(this, "mydb.db3", 1);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         Cursor cursor = db.query("userin", null, null, null, null, null, null);
         //如果游标不为0，说明已经曾经有用户登录成功过
@@ -118,26 +123,19 @@ public class tizhi extends AppCompatActivity {
             System.out.println("记录用户名是" + username);
         }
         //从数据库中找到用户的数据
-        Cursor cursor1 = db.rawQuery(" select * from user where username = ? ",new String[]{username});
+        Cursor cursor1 = db.rawQuery(" select * from user where username = ? ", new String[]{username});
         if (cursor1.moveToFirst()) {
             phone = cursor1.getString(2);
             gender = cursor1.getInt(3);
-            if(gender == 0)
-            {
-                gender1= "无记录";
-            }
-            else if(gender ==1)
-            {
-                gender1 ="man";
-            }
-            else if(gender ==2)
-            {
+            if (gender == 0) {
+                gender1 = "无记录";
+            } else if (gender == 1) {
+                gender1 = "man";
+            } else if (gender == 2) {
                 gender1 = "woman";
+            } else {
+                gender1 = "无记录";
             }
-            else
-                {
-                 gender1= "无记录";
-                }
             physique = cursor1.getInt(4); //获取体质
             System.out.println("当前用户的性别为" + physique);
         }
@@ -146,130 +144,113 @@ public class tizhi extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左侧添加一个默认的返回图标
         getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
     }
+
     View.OnClickListener mListener = new View.OnClickListener() {                  //不同按钮按下的监听事件选择
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.tizhi_button1:                            //登录界面的注册按钮
-                    if(tizhi !=1) {
+                    if (tizhi != 1) {
                         changecolor(tizhi);
                         tizhi_button1.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button1.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 1;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button1.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button1.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button2:                              //登录界面的登录按钮
-                    if(tizhi !=2) {
+                    if (tizhi != 2) {
                         changecolor(tizhi);
                         tizhi_button2.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button2.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 2;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button2.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button2.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button3:                            //登录界面的注册按钮
-                    if(tizhi !=3) {
+                    if (tizhi != 3) {
                         changecolor(tizhi);
                         tizhi_button3.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button3.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 3;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button3.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button3.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button4:                            //登录界面的注册按钮
-                    if(tizhi !=4) {
+                    if (tizhi != 4) {
                         changecolor(tizhi);
                         tizhi_button4.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button4.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 4;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button4.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button4.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button5:                            //登录界面的注册按钮
-                    if(tizhi !=5) {
+                    if (tizhi != 5) {
                         changecolor(tizhi);
                         tizhi_button5.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button5.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 5;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button5.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button5.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button6:                            //登录界面的注册按钮
-                    if(tizhi !=6) {
+                    if (tizhi != 6) {
                         changecolor(tizhi);
                         tizhi_button6.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button6.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 6;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button6.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button6.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button7:                            //登录界面的注册按钮
-                    if(tizhi !=7) {
+                    if (tizhi != 7) {
                         changecolor(tizhi);
                         tizhi_button7.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button7.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 7;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button7.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button7.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button8:                            //登录界面的注册按钮
-                    if(tizhi !=8) {
+                    if (tizhi != 8) {
                         changecolor(tizhi);
                         tizhi_button8.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button8.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 8;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button8.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button8.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
                     }
                     break;
                 case R.id.tizhi_button9:                            //登录界面的注册按钮
-                    if(tizhi !=9) {
+                    if (tizhi != 9) {
                         changecolor(tizhi);
                         tizhi_button9.setBackgroundColor(Color.parseColor("#45B649"));
                         tizhi_button9.setTextColor(Color.parseColor("#ffffff"));
                         tizhi = 9;
-                    }
-                    else
-                    {
+                    } else {
                         tizhi_button9.setBackgroundResource(R.drawable.tizhi_button);
                         tizhi_button9.setTextColor(Color.parseColor("#2ebf91"));
                         tizhi = 0;
@@ -306,7 +287,7 @@ public class tizhi extends AppCompatActivity {
                     }).show();
                     break;
                 case R.id.kaishidajuan:
-                    Intent intent = new Intent(tizhi.this, expandable.class) ;    //切换Login Activity至User Activity
+                    Intent intent = new Intent(tizhi.this, expandable.class);    //切换Login Activity至User Activity
                     startActivity(intent);
                     finish();
                     break;
@@ -336,10 +317,9 @@ public class tizhi extends AppCompatActivity {
             }
         }
     };
-    public void changecolor(int i)
-    {
-        switch(i)
-        {
+
+    public void changecolor(int i) {
+        switch (i) {
             case 1:
                 tizhi_button1.setBackgroundResource(R.drawable.tizhi_button);
                 tizhi_button1.setTextColor(Color.parseColor("#2ebf91"));
@@ -369,11 +349,12 @@ public class tizhi extends AppCompatActivity {
                 tizhi_button9.setTextColor(Color.parseColor("#2ebf91"));
         }
     }
+
     //获取uri
-    public  Uri getOutputMediaFileUri(Context context) {
+    public Uri getOutputMediaFileUri(Context context) {
         //测试新的路径
         //创建路径
-        String filePath = getExternalFilesDir(null).getAbsolutePath() + File.separator + String.valueOf(System.currentTimeMillis()) + ".jpg";
+        filePath = getExternalFilesDir(null).getAbsolutePath() + File.separator + String.valueOf(System.currentTimeMillis()) + ".jpg";
         //创建file文件
         File outputFile = new File(filePath);
         //如果上述定义的路径不存在则创建路径
@@ -382,23 +363,24 @@ public class tizhi extends AppCompatActivity {
         }
         //根据sdk版本创建uri
         Uri contentUri = null;
-        if(Build.VERSION.SDK_INT < 24){
+        if (Build.VERSION.SDK_INT < 24) {
             contentUri = Uri.fromFile(outputFile);
-        }
-        else{
+        } else {
             contentUri = FileProvider.getUriForFile(this,
                     context.getApplicationContext().getPackageName() + ".provider", outputFile);
             System.out.println(contentUri);
         }
         return contentUri;
     }
+
     //动态申请权限
     private void requestPermission() {
         // 当API大于 23 （M表示23）时，才动态申请权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            ActivityCompat.requestPermissions(tizhi.this,CAMERA_PERMISSIONS,CAMERA_PERMISSIONS_CODE);
+            ActivityCompat.requestPermissions(tizhi.this, CAMERA_PERMISSIONS, CAMERA_PERMISSIONS_CODE);
         }
     }
+
     //处理权限申请
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -415,14 +397,15 @@ public class tizhi extends AppCompatActivity {
                             break;
                         }
                     }
-                }else{
+                } else {
                     Toast.makeText(tizhi.this, "已授权", Toast.LENGTH_LONG).show();
                 }
                 break;
         }
     }
+
     //弹出提示框
-    private void showDialog(){
+    private void showDialog() {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setMessage("体质监测需要相机、录音和读写权限，是否去设置？")
                 .setPositiveButton("是", new DialogInterface.OnClickListener() {
@@ -441,40 +424,60 @@ public class tizhi extends AppCompatActivity {
                 .setCancelable(false)
                 .show();
     }
+
     // 跳转到当前应用的设置界面
-    private void goToAppSetting(){
+    private void goToAppSetting() {
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
         Uri uri = Uri.fromParts("package", getPackageName(), null);
         intent.setData(uri);
         startActivity(intent);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
             case CAMERA_TAKE_PHOTO:
                 //如果拍照成功并且存放到指定uri
                 if (resultCode == Activity.RESULT_OK) {
-                    //在img中显示图片
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {//登录按钮监听事件
+                            try {
+                                String url = OkhttpForPhysique.BASE_URL;
+                                String result = OkhttpForPhysique.uploadImage(url, filePath);
+                                Log.v("zhongyi",result);
+                                if (result.equals("0pinghe")) {
+                                    Intent intent = new Intent(tizhi.this, pinghezhi.class);    //切换Login Activity至User Activity
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                //在img中显示图片
 //                    iv_photo.setImageURI(uri);
-                    Intent intent = new Intent(tizhi.this, pinghezhi.class) ;    //切换Login Activity至User Activity
-                    startActivity(intent);
-                    finish();
-                    System.out.println("相机拍照成功了");
+//                    Intent intent = new Intent(tizhi.this, pinghezhi.class) ;    //切换Login Activity至User Activity
+//                    startActivity(intent);
+//                    finish();
+//                    System.out.println("相机拍照成功了");
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+                    break;
                 }
-                System.out.println(resultCode);
-                break;
             case CAMERA_CHOOSE_PICTURE:
-                if(data!=null) {
+                if (data != null) {
                     Bitmap bm = null;
                     // 外界的程序访问ContentProvider所提供数据 可以通过ContentResolver接口
                     ContentResolver resolver = getContentResolver();
-                    Intent intent = new Intent(tizhi.this, pinghezhi.class) ;    //切换Login Activity至User Activity
+                    Intent intent = new Intent(tizhi.this, pinghezhi.class);    //切换Login Activity至User Activity
                     startActivity(intent);
                     finish();
                     try {
                         Uri originalUri = data.getData(); // 获得图片的uri
-                        System.out.println("图片的uri为"+originalUri);
+                        System.out.println("图片的uri为" + originalUri);
 //                        iv_photo.setImageURI(originalUri);
 
                         bm = MediaStore.Images.Media.getBitmap(resolver, originalUri); // 显得到bitmap图片
@@ -491,14 +494,13 @@ public class tizhi extends AppCompatActivity {
                         cursor.moveToFirst();
                         // 最后根据索引值获取图片路径
                         String path = cursor.getString(column_index);
-                        System.out.println("图片的path:"+path);
+                        System.out.println("图片的path:" + path);
 //                    iv_photo.setImageURI(originalUri);
 
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                }
-                else{
+                } else {
                     System.out.println("您取消选择相册");
                 }
                 break;
@@ -512,10 +514,11 @@ public class tizhi extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
     //重写这个方法就可以实现toolbar的返回，目前尚未看懂
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==android.R.id.home){
+        if (item.getItemId() == android.R.id.home) {
             finish();
         }
         return super.onOptionsItemSelected(item);
