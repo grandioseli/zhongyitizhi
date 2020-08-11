@@ -1,6 +1,7 @@
 package com.example.zhongyitizhi1.expandable;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -65,5 +66,13 @@ public class expandable extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return TAB_TITLES[position];
         }
+    }
+    //重写这个方法就可以实现toolbar的返回，目前尚未看懂
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
