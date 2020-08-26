@@ -41,6 +41,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'com.lguipeng.bubbleview:library:1.0.0'
     implementation 'de.devland.esperandro:esperandro-api:2.2.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01'
     annotationProcessor 'de.devland.esperandro:esperandro:2.2.0'
     implementation 'com.umeng.analytics:analytics:6.1.0'
     //retrofit和rxjava是api请求的
