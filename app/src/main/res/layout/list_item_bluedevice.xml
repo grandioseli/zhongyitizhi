@@ -15,9 +15,4 @@
         android:textColor="@color/black"
         android:textSize="18sp" />
 
-    <!--    <TextView-->
-<!--        android:id="@+id/blueDeviceMacView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="mac地址" />-->
 </LinearLayout>

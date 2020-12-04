@@ -98,17 +98,6 @@
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/xingming" />
-<!--    <ImageView-->
-<!--        android:id="@+id/xingming3"-->
-<!--        android:layout_width="30dp"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:src="@drawable/ic_navigate_next_grave_24dp"-->
-<!--        app:layout_constraintHorizontal_bias="0.99"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@id/xingming"-->
-<!--        app:layout_constraintStart_toStartOf="parent">-->
-<!--    </ImageView>-->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/shoujihao"
         android:layout_width="match_parent"

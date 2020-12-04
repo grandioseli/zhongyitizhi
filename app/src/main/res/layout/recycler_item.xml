@@ -103,15 +103,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--        <TextView-->
-<!--            android:id ="@+id/t1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="4dp"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="16dp"-->
-<!--            android:text="Content"-->
-<!--            android:textColor="#fff" />-->
 
     </com.example.zhongyitizhi1.expandable.ExpandableLayout>
 

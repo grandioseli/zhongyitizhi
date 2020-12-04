@@ -13,16 +13,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
-<!--        android:id="@+id/dreamlinear"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="400dp"-->
-<!--        android:layout_marginLeft="5dp"-->
-<!--        android:layout_marginRight="5dp"-->
-<!--        android:layout_marginTop="70dp"-->
-<!--        android:background="@drawable/me_yuanjiaojuzhen1"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/bushen"
         android:layout_width="match_parent"

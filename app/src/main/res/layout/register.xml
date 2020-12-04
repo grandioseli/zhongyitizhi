@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     tools:context=".MainActivity">
-
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -158,15 +157,6 @@
 
         </LinearLayout>
 
-
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:text="忘记密码?"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#96ffffff"-->
-<!--            android:textSize="16sp" />-->
 
 
     </LinearLayout>
