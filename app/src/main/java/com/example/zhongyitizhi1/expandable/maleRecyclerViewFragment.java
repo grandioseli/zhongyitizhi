@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,7 +33,8 @@ import com.google.android.material.tabs.TabLayout;
 public class maleRecyclerViewFragment extends Fragment {
     public static final int QUESTIONSUM = 64;
     private TextView textpeople;
-    private LinearLayoutCompat l1;
+    private LinearLayoutCompat l1;//头部linearlayout
+    private LinearLayoutCompat l3;//底部提交linearlayout
     private ImageView l2;
     public  static int questionindex[] = new int[]{
         R.string.question1,R.string.question2,R.string.question3,R.string.question4,R.string.question5,R.string.question6,R.string.question7,R.string.question8,
@@ -52,8 +54,10 @@ public class maleRecyclerViewFragment extends Fragment {
         textpeople = rootView.findViewById(R.id.peopletext);
         l1 = rootView.findViewById(R.id.linearInExpandable);
         l2 = rootView.findViewById(R.id.people);
+        l3 = rootView.findViewById(R.id.submit);
         textpeople.setText("这是一份为男性精心准备的调查问卷，以下问题请您根据最近三个月的身体感受回答，但是不建议16岁以下孩童回答");
         l1.setBackgroundResource(R.drawable.yuanjiaojuzhen5);
+        l1.setBackgroundResource(R.drawable.yuanjiaojuzhen3);
         l2.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_nansheng));
         RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

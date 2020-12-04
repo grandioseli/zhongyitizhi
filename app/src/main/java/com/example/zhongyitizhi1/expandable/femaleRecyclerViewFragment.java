@@ -26,6 +26,7 @@ public class femaleRecyclerViewFragment extends Fragment {
     public static final int QUESTIONSUM = 64;
     private TextView textpeople;
     private LinearLayoutCompat l1;
+    private LinearLayoutCompat l3;
     private ImageView l2;
     public  static int questionindex[] = new int[]{
             R.string.question1,R.string.question2,R.string.question3,R.string.question4,R.string.question5,R.string.question6,R.string.question7,R.string.question8,
@@ -44,8 +45,10 @@ public class femaleRecyclerViewFragment extends Fragment {
         textpeople = rootView.findViewById(R.id.peopletext);
         l1 = rootView.findViewById(R.id.linearInExpandable);
         l2 = rootView.findViewById(R.id.people);
+        l3 = rootView.findViewById(R.id.submit);
         textpeople.setText("这是一份为女性精心准备的调查问卷，以下问题请您根据最近三个月的身体感受回答，但是不建议孕妇及16岁以下孩童回答");
         l1.setBackgroundResource(R.drawable.yuanjiaojuzhen6);
+        l1.setBackgroundResource(R.drawable.yuanjiaojuzhen1);
         l2.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_nvsheng));
         RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

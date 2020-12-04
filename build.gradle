@@ -13,7 +13,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:4.0.1'
         classpath 'com.github.lecho:hellocharts-android:v1.5.8'
         //mob短信服务
         classpath "com.mob.sdk:MobSDK:2018.0319.1724"

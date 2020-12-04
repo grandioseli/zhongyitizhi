@@ -18,9 +18,6 @@ import com.example.zhongyitizhi1.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by sunfusheng on 2015/2/6.
- */
 public class DetailActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)

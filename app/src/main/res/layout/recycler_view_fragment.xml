@@ -34,13 +34,35 @@
         app:layout_constraintEnd_toEndOf="@id/linearInExpandable"
         app:layout_constraintStart_toEndOf="@id/people"
         app:layout_constraintTop_toTopOf="@id/linearInExpandable"
-        app:layout_constraintBottom_toBottomOf="@id/linearInExpandable"/>
+        app:layout_constraintBottom_toBottomOf="@id/linearInExpandable"
+        android:gravity="center_horizontal" />
     <androidx.recyclerview.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/linearInExpandable"
-        />
+        app:layout_constraintTop_toBottomOf="@id/linearInExpandable" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/yuanjiaojuzhen3"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view">
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:id="@+id/submittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="提  交  问  卷"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:gravity="bottom"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="@id/submit"
+        app:layout_constraintStart_toStartOf="@id/submit"
+        app:layout_constraintTop_toTopOf="@id/submit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
